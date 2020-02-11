@@ -23,10 +23,11 @@ const generateBlogConfig = () => {
 
 const configOutput = {
   backend: {
-    name: "test-repo"
+    name: "git-gateway",
+    branch: "master"
   },
-  media_folder: "static/assets",
-  public_folder: "assets",
+  media_folder: "static/img",
+  public_folder: "img",
   collections: [
     ...generateBlogConfig(),
     {
