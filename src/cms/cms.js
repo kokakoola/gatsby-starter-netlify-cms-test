@@ -16,4 +16,4 @@ CMS.registerPreviewTemplate('index', IndexPagePreview)
 CMS.registerPreviewTemplate('about', AboutPagePreview)
 CMS.registerPreviewTemplate('products', ProductPagePreview)
 CMS.registerPreviewTemplate("blog-en", BlogPostPreview);
-CMS.registerPreviewTemplate('blog-et', BlogPostPreview)
+CMS.registerPreviewTemplate('blog-et', BlogPostPreviewEt)
