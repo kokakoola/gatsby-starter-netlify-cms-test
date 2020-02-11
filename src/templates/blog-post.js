@@ -88,16 +88,18 @@ BlogPost.propTypes = {
 export default BlogPost
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      id
-      html
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        title
-        description
-        tags
-      }
-    }
-  }
-`
+         query BlogPostTemplate($langKey: String!) {
+           markdownRemark(
+             fields: { langKey: { eq: $langKey } }
+             frontmatter: { templateKey: { eq: "blog-post" } }
+           ) {
+             html
+             frontmatter {
+               date(formatString: "MMMM DD, YYYY")
+               title
+               description
+               tags
+             }
+           }
+         }
+       `;
